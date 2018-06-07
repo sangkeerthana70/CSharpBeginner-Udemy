@@ -1,0 +1,5 @@
+NAMESPACE
+A namespace is a container for related classes. As the number of classes in application grows we need to organise classes. It is a container for  related classes. Each namespace can have tens of related classes. Eg:each namespace can have a similar set of classes to work with databases or graphics or security and so on.
+ASSEMBLY
+As the namespace grows we need a way of partitioning a application. A assembly is a container for related namespaces. Physically it is a file on the disk. The file can be executable or DLL which is a dynamically linked library.
+When an application is compiled the compiler will build one or more assembly depending on how the code is partitioned.
