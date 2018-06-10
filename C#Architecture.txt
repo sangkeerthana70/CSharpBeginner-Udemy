@@ -3,3 +3,35 @@ A namespace is a container for related classes. As the number of classes in appl
 ASSEMBLY
 As the namespace grows we need a way of partitioning a application. A assembly is a container for related namespaces. Physically it is a file on the disk. The file can be executable or DLL which is a dynamically linked library.
 When an application is compiled the compiler will build one or more assembly depending on how the code is partitioned.
+
+Data Type Conversions
+
+Implicit Type Conversion
+byte b = 1;(this takes upto 1 byte(8 bits)
+int i = b;(a integer takes 4 bytes)
+WE can copy a byte in an integer since the compiler will know that they are of the same data type. No data loss will happen.
+Another example is 
+int i = 1;
+float f = i;
+Again they are of same data types hence the compiler will let us copy variables of same data types. No data loss will happen.
+
+Explicit type Conversion
+int i = 1;
+byte b = i;
+Since integer is 4 bytes and when we try to convert it into byte which is only 1 byte 3 out of 4 bytes will be lost which  will result in data loss. This happens only when the value stored in the integer is beyond the capacity of the byte.
+Th reason is if the value 1 is assigned for the integer it can be stored in a byte , but if the value of 300 is assigned to the integer it cannot be stored or copied in a byte since it cannot hold values beyond 255.
+In this case since the copiler knows that there will be data loss and will not let implicit data type conversion. So we have to explicitly tell the compiler that we are aware of the data loss and to go ahead with the conversion.
+This can be done by prefixing the variable with the target data type also called as type casting.
+Example-1:
+int i = 1;
+byte b = (byte)i;(since an int cannot be converted to a byte we explicitly tell compiler to convert a byte to a byte )
+Example-2:
+float f = 1.0f;
+int i = (int)f;(since a float cannot be converted  to an int we explicitly tell compiler to convert a int to the same int type)
+
+Non-compatible types
+While working with non-compatible data types we need to convert them first. Since string and int are diff data types we cannot use explicit casting.
+Example:
+string s = "1";(this is a number represented as a string)
+int i = (int)s;(cannot use explicit casting for diff data types)
+In such scenarios we have to use the convert class or use the parse method.
