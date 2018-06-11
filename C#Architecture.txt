@@ -34,4 +34,7 @@ While working with non-compatible data types we need to convert them first. Sinc
 Example:
 string s = "1";(this is a number represented as a string)
 int i = (int)s;(cannot use explicit casting for diff data types)
-In such scenarios we have to use the convert class or use the parse method.
+In such scenarios we have to use the Convert class or use the parse method.
+
+Convert Class
+Convert classes work in most data type conversions. But sometimes when the source data type cannot be converted to the target Data type there is a chance for exception. We should be aware of that and use the try catch exception handling.

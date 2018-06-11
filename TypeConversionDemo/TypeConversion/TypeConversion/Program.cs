@@ -22,6 +22,7 @@ namespace TypeConversion
             //Example:1
             try
             {
+                //the convert class converts number to byte.
                 var number = "1234";
                 // int i = Convert.ToInt32(number);
                 byte b = Convert.ToByte(number);//this gives handling exception error when the program is run hence the try catch Exception is done
@@ -34,6 +35,17 @@ namespace TypeConversion
                 
             }
 
+            //Example-2 for non-compatible data type
+            try
+            {
+                string str = "true";
+                bool b = Convert.ToBoolean(str);
+                Console.WriteLine(b);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("The number could not be converted to a byte");
+            }
          
 
 
