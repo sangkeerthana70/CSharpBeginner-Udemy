@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Arrays
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           // int[] numbers = new int[3];
+           var numbers = new int[3];// var numbers is assigned to new integer array
+            numbers[0] = 1;
+            numbers[1] = 19;
+            numbers[2] = 25;
+            Console.WriteLine(numbers[0]);
+            Console.WriteLine(numbers[1]);
+            Console.WriteLine(numbers[2]);
+
+            var flags = new bool[3];
+            flags[0] = true;
+
+            Console.WriteLine(flags[0]);
+            Console.WriteLine(flags[1]);
+            Console.WriteLine(flags[2]);
+
+            var names = new String[3] { "Jack", "John", "Mary" };
+            Console.WriteLine(names[0]);
+            Console.WriteLine(names[1]);
+            Console.WriteLine(names[2]);
+
+
+
+        }
+    }
+}
