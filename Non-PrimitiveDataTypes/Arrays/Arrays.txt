@@ -1,0 +1,7 @@
+String Format
+We might have different string variables that we're concatenating and it's hard to visualize what the output looks like.
+In that case we can can use string format.
+in C-sharp this string word maps to the String class in the Dot Net Framework.
+classes can have fields and methods and we can declare these members as the static which means we can access them directly on the class without the need to create an object.
+
+So in the example you see here recalling the formatting method on the string class format is a static method. So we can directly access it using string dot format.
