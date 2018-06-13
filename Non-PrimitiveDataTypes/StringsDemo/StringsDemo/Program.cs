@@ -19,10 +19,16 @@ namespace StringsDemo
             var formattedNames = string.Join(",", names);
             Console.WriteLine(formattedNames);
 
-            //verbatim strings
-            var text = "Hi John \nLook into the following paths\nc:\\folder1\\folder2\nc:\\folder3\\folder4";
+
+            //var text = "Hi John \nLook into the following paths\nc:\\folder1\\folder2\nc:\\folder3\\folder4";
+            //Console.WriteLine(text);
+
+            //verbatim strings to properly formatt the strings
+            var text =  @"Hi John \nLook into the following paths
+                        c:\folder1\folder2
+                        c:\folder3\folder4";
+
             Console.WriteLine(text);
-            
 
         }
 
