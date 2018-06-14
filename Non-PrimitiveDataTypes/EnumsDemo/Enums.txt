@@ -2,6 +2,6 @@ An enum is a data type that represents a set of name value pairs or constants.
 Use enums where you have a number of related constants. This will be a new type in your application just like we have classes or structures. An enum is internally an integer but 
 if we want to change the data type and use a byte instead it could be easier for us to map it in the  database columns then you can specify byte during declaration of your name.
 
-Since Enum is a new type it has to be defined at the namespace level. Always explicitly set values for enums because somewhere in the datbase we might have a table that represent the id's or values of these enums. So it is important that these values match with the values in the database.
+Since Enum is a new type it has to be defined at the namespace level. Always explicitly set values for enums because somewhere in the datbase we might have a table that represent the id's or values of these enums. So it is important that these values match with the values in the database. If we rely on the automatic value assignment and sometime in the future add a new member to this new enum, the value of some of the existing members may change and may no longer match the records in the database
 
 A enum when declared as a new type can be used in the main method when declaring a variable using a dot notation.
