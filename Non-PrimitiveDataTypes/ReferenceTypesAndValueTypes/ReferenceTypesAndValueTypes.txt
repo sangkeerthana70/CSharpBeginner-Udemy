@@ -1,0 +1,19 @@
+Primitive data types are int, float, char and bool.
+Non-Primitive data types are classes, structures, arrays and strings.
+In C# arrays and strings are both classes. Strings map to (System.String) and arrays map to (System.Array) class in the system namespace.
+
+In C# we have two main type the classes and structures from which we create new types. So every type we learned so far is either a structure or a class.
+All primitive types are structures. Use structures for small types that can take no more than 8bytes internally defined as a structure in dot net.
+
+Arrays and Strings are both classes. We can also define custom classes like person or calculator. In C-sharp these classes on structures are treated differently at runtime in terms of memory management.
+
+Value Types and Reference types
+Structures are value types while classes are reference types.
+When you create a variable that is a value type a part of memory called Stack is allocated for that variable. This memory allocation is done automatically so you don't have to worry about it. When this variable goes out of scope it will immediately get removed from the stack by runtime or C-L-R.
+
+In reference types however you the programmer need to allocate memory yourself. 
+When we use the new operator keyword while instantiating classes, the new operator will tell the runtime to allocate memory to this object. And this happens from a different area of the memory called heap memory. This area of memory unlike Stack is sustainable. So if you create an object in reference type and that object goes out of scope it will continue to exist in the heap for a little while. It won't be removed immediately. There is a process called garbage collection which is done by runtime or C-L-R that takes care of releasing the object from heap memory once it is used.
+
+Conclusion
+when we  copy an object to a new variable depending on whether that object is a value type or reference type. There will be two different outcomes and it's much easier to show this in code. Copying value types will be different from reference types.
+
