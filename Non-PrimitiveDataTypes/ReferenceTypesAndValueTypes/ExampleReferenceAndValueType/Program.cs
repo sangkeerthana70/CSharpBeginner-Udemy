@@ -22,21 +22,22 @@ namespace ExampleReferenceAndValueType
             Console.WriteLine(number);//value will be 1 unchanged as passed by value 
 
             //Ex:2 passing by reference type
-            var person = new Person() {Age = 20};
+            var person = new Person() { Age = 20 };
             MakeOld(person);
             Console.WriteLine(person.Age);
-        
-        //static methods that are void wont return any value but created to call them without creating an object(demo purposes)
-         
-        public static void Increment(int number)
-        {
-            //addition assignment operator in action
-            number += 10;
-        }
-        
-        public  static void MakeOld(Person person)
-        {
-            person.Age += 10;
+
+            //static methods that are void wont return any value but created to call them without creating an object(demo purposes)
+
+            public static void Increment(int number1)
+            {
+                //addition assignment operator in action
+                number += 10;
+            }
+
+            public static void MakeOld(Person person1)
+            {
+                person1.Age += 10;
+            }
         }
     }
 }
