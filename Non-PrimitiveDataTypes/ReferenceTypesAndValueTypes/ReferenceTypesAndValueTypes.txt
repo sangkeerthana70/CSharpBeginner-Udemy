@@ -21,5 +21,32 @@ Integers are value types. When we copy a variable of value type to another varia
 
 Memory allocation for value types (structures).
 Somewhere in the stack we have a location identified by A. And in that location we have the value 10 when we copy to B, a new location in memory and stack is created identified as B and the value we had there in A is copied to B. That's why these two variables are now completely independent and making a change to one does not impact the other.
+EX:The output will be a: 10 ,b:  11
+
 
 Memory allocation for reference types (classes).
+
+When we declare an array(array1 in demo) it is class  and falls under the reference type category.
+Now when we copy it to another variable array(array2 in demo)and modify the first element in the target array(array2).
+			var arr1 = new int[3] { 1, 2, 3 };//new keyword allocates memory 
+            var arr2 = arr1;
+            arr2[0] = 0;
+            Console.WriteLine(string.Format("arr1[0]: {0}, arr2[0]: {1}", arr1[0], arr2[0]));
+The output will be arr1[0]: 0, arr2[0]: 0
+
+When we create and initialize array 1, an object is created on the heap. This object is in a memory location with that address on the heap and inside this memory location we have the actual array with three elements [1,2,3].
+Next the runtime or C-L-R will create a variable on the stack identified as array1 and the value inside this variable or inside this memory location is a memory address and that's the address of the object on the heap. EX:arr1[0X00416A].
+Array1 points or references to the object on the heap.
+
+Copying array1 to array2.
+Runtime or C-L-R creates another variable on the stack identified as Array 2 and again inside this variable We're going to have a memory address.
+EX:arr2[0X00416A]. this address is the address of the object on the heap. That's why both array 1 and array 2 point to the same object. Which means when we make any changes on this object on the heap either through array1 reference or array2 the changes are visible through the other variable. That's why we call these types reference types.
+So when we copy them their reference or their memory address is copied and not the actual value.
+
+
+
+
+
+
+
+
