@@ -17,3 +17,9 @@ When we use the new operator keyword while instantiating classes, the new operat
 Conclusion
 when we  copy an object to a new variable depending on whether that object is a value type or reference type. There will be two different outcomes and it's much easier to show this in code. Copying value types will be different from reference types.
 
+Integers are value types. When we copy a variable of value type to another variable a copy of that value is taken and stored in the target location in the memory. This is called passing by value since their values are copied.
+
+Memory allocation for value types (structures).
+Somewhere in the stack we have a location identified by A. And in that location we have the value 10 when we copy to B, a new location in memory and stack is created identified as B and the value we had there in A is copied to B. That's why these two variables are now completely independent and making a change to one does not impact the other.
+
+Memory allocation for reference types (classes).
