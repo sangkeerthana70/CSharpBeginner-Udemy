@@ -18,6 +18,7 @@ namespace PracticeOnConditionals
         private static void Ex1(NotFiniteNumberException number)
         {
             throw new NotImplementedException();
+
         }
 
         public void Ex1()
