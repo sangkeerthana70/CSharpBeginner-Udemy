@@ -16,6 +16,7 @@ namespace ExampleReferenceAndValueType
     {
         static void Main(string[] args)
         {
+
             //Ex:1 passing by value type
             var number = 1;
             Increment(number);
@@ -25,19 +26,20 @@ namespace ExampleReferenceAndValueType
             var person = new Person() { Age = 20 };
             MakeOld(person);
             Console.WriteLine(person.Age);
+        }
 
             //static methods that are void wont return any value but created to call them without creating an object(demo purposes)
 
-            public static void Increment(int number1)
+            public static void Increment(int number)
             {
                 //addition assignment operator in action
                 number += 10;
             }
 
-            public static void MakeOld(Person person1)
+            public static void MakeOld(Person person)
             {
-                person1.Age += 10;
+                person.Age += 10;
             }
-        }
+        
     }
 }
