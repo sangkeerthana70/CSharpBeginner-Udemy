@@ -28,10 +28,27 @@ namespace DemoLists
             Console.WriteLine("Count: " + numbers.Count);
 
             //Remove() method
-            numbers.Remove(1);
-            foreach(var j in numbers)
+            numbers.Remove(1);//This example removes only one 1 from the list
+            foreach (var j in numbers)
                 Console.WriteLine(j);
-           
+
+            Console.WriteLine();
+            Console.WriteLine();
+            //to rempove all occurrences of 1 in the list 
+            
+            for( var i = 0; i < numbers.Count; i ++)
+            {
+                if(numbers[i] == 1)
+                numbers.Remove(numbers[i]);
+
+            }
+            foreach(var q in numbers)
+                Console.WriteLine("collection after removing 1's from numbers: " + q);
+
+            //clear method removes all elements from the list
+            numbers.Clear();
+            Console.WriteLine("Count: " + numbers.Count);
+
         }
     }
 }
