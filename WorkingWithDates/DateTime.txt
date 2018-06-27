@@ -1,0 +1,10 @@
+DateTime is a structure in the system namespace. To create a dateTime object, use the new operator which can take multiple overloads.
+We can specify year month and day or  to be more specific  we can go up to hour minute and second. 
+It has a bunch of different constructors. 'Now'and 'Today' are  static properties of DateTime structure. With DateTime object components like year, month, day ,minute and hour can be accessed easily.
+
+One important thing to remember about DateTime object is that they are immutable which means once we create them we cannot change them.
+To modify them there are a bunch of methods and they all start with ADD.
+
+
+Time Span
+Time Span is a type which represents the length of time.
