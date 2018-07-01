@@ -11,11 +11,14 @@ namespace Summarising_Text
         static void Main(string[] args)
         {
             var sentence = "This is going to be a really really really really really long text";
-            const int maxLength = 20;
+            var summary = StringUtility.SummarizeText(sentence, 25);
+            Console.WriteLine(summary);
 
+            /*const int maxLength = 20;
             if (sentence.Length < maxLength)
             {
                 Console.WriteLine(sentence);
+                
             }
             else
             {
@@ -27,18 +30,17 @@ namespace Summarising_Text
                 var totalCharacters = 0;
                 var summaryWords = new List<string>();//stores words dynamically as the summary is created
 
-                foreach(var word in words)//loop over the words
+                foreach (var word in words)//loop over the words
                 {
                     summaryWords.Add(word);
                     totalCharacters += word.Length + 1;//get the length of each word and add it to the totalCharacter variable. +1 indicates the space after each word.
-                    
+
                     if (totalCharacters > maxLength)
                         break;//break out of loop if totalCharacters exceeds 20.
                 }
                 var summary = String.Join(" ", summaryWords) + "...";//join with space as a delimiter
-                Console.WriteLine(summary);
-
-            }
+                Console.WriteLine(summary);*/
         }
+
     }
 }
